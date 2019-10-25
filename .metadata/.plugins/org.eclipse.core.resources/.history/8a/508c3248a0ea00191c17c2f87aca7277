@@ -1,0 +1,15 @@
+class EventHandlerV1 implements ActionListener {
+    
+    private TextField screen;
+    
+    public EventHandlerV1(TextField screen) {
+        // TODO Auto-generated constructor stub
+        this.screen  = screen;
+    }
+    
+    public void actionPerformed(ActionEvent AE) {
+        Button button = (Button) AE.getSource();
+        System.out.println(button.getLabel());
+        screen.setText(screen.getText() + button.getLabel());
+    }
+}
